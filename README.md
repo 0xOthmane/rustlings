@@ -24,3 +24,25 @@ You can make them mutable by adding `mut` in front of the variable name.
 - Each condition is followed by a `{}` block.
 - Multiple conditions: `if condition {} else if condition2 {} else {}`.
 - In Rust, every arm of an `if` expression has to return the same type of value.
+
+## Primitive types
+- Boolean `bool`
+- Characters `char`: note the single quotes `let character = '/'`.
+- Arrays `let _: [u8; 3] = [1, 2, 3];` or  `let _: [u8; 3] = [0; 3];`
+- Tuple `let cat = ("Furry McFurson", 3.5);`. To destruct a tuple we can use pattern matching 
+```console
+let tup = (500, 6.4, 1);
+let (x, y, z) = tup;
+
+println!("The value of y is: {y}");
+```
+We can also access a tuple element directly by using a period (.) followed by the index of the value we want to access.
+- [Data Types](https://doc.rust-lang.org/stable/book/ch03-02-data-types.html)
+- [The Slice Type](https://doc.rust-lang.org/stable/book/ch04-03-slices.html)
+
+## Vectors
+- Two ways to define a Vector:
+1. One way is to use the `Vec::new()` function to create a new vector
+  and fill it with the `push()` method.
+2. The second way, which is simpler is to use the `vec![]` macro and
+  define your elements inside the square brackets
